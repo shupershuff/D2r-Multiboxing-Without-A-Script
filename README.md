@@ -13,13 +13,13 @@ This method will launch the game directly from your desktop, without the need to
 3. Edit the shortcut and append the target field with:<br>
   -username YourBnetEmail -password YourBnetPassword -address \<region><br>
 \<Region> could be us.actual.battle.net, EU.actual.battle.net and KR.actual.battle.net.
-4. Rename Shortcut to your linking.
-5. Launch Game from shortcut.
+4. Rename shortcut to your linking.
+5. Launch game from shortcut.
 6. Kill handle as per [Handle Killing Methods](#handle-killing-methods)
 
 You can either copy a shortcut for each account and region or simply keep one shortcut per account and edit address details the shortcut when you want to switch regions.<br>
 Drawback with this method is that Blizzard forgot to make this work with MFA, which is kind of moot anyway as Blizzard prevent you from using standard MFA apps (which allow additional accounts).<br>
-If you have issues logging in, try logging in manually into battlenet as sometimes there are captcha codes (especially if you typo your email or password).
+If you have issues logging in, try logging in manually into battlenet as sometimes there are captcha codes (especially if you typo your email or password).<br>
 
 ## Launch via Battlenet
 Ew yucky. Ignore the plethora of YouTube guides telling you to do this. Gross.<br>
@@ -37,6 +37,7 @@ Note: Requires a script (unless you like typing commands manually)<br>
 https://learn.microsoft.com/en-us/sysinternals/downloads/handle
 
 # Methods without requiring handle to be killed.
+All of these options are gross from a usability, Quality of Life and even financial (hardware) perspective but do functionally work without the need to use software to kill process handle.
 ## Virtual Machine
 TBC
 ## Windows Account Switching
