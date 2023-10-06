@@ -7,8 +7,10 @@
 Are you worried about someones app or script to multibox Diablo 2? Do you have PTSD from being rick rolled in scripts?<br>
 This is a guide on all the method I know of for Diablo 2 Resurrected Multi boxing that don't require a script or custom application.<br>
 <br>
-If you do want to use a script, I heard that [this one](https://github.com/shupershuff/Diablo2RLoader) is pretty damn good and the guy that made it is accepting mortgage payments as a way to say a small thanks.<br>
-Outside of this there are a couple other good scripts I've seen out there. Obviously ensure it's open source, don't be downloading some dodgy .exe.
+If you do want to use a script, I heard that [this one](https://github.com/shupershuff/Diablo2RLoader) is pretty damn good and the guy that made it is accepting mortgage payments as a way to say a small thanks. Payoff some internet strangers house today and feel great about it tomorrow! Everybody wins!<br>
+Anywho, outside of my script there are a couple other good scripts and apps I've seen out there. For the free ones I obviously recommend it's open source, don't be running some dodgy .exe where it can't be publically vetted on what it's doing.
+For the paid ones, that's at your own risk but there are some seemingly reputable ones out there. 
+I would recommend staying clear of any game altering mods etc.
 
 # Game Launching Methods
 ## Launch via Shortcut
@@ -57,6 +59,8 @@ TBC
 # Notes
 ## Performance Tips
 TBC but long story short, set FPS cap, run in windowed mode, reduce gfx settings to low
+
+There are mods which force legacy graphics which some folk enjoy but I can't endorse these, use at your own risk.
 ## FAQ
 TBC
 ## Other notes
