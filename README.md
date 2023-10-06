@@ -1,3 +1,8 @@
+<br>
+
+**THIS PAGE IS A WORKING DRAFT AND ISN'T FINISHED**    
+<br>
+<br>
 # Overview
 Are you worried about someones app or script to multibox Diablo 2? Do you have PTSD from being rick rolled in scripts?<br>
 This is a guide on all the method I know of for Diablo 2 Resurrected Multi boxing that don't require a script or custom application.<br>
@@ -11,11 +16,15 @@ This method will launch the game directly from your desktop, without the need to
 1. Browse to your Diablo 2 Resurrected game install folder.
 2. Right click on d2r.exe and create shortcut. Copy shortcut to desktop.
 3. Edit the shortcut and append the target field with:<br>
-  -username YourBnetEmail -password YourBnetPassword -address \<region><br>
-\<Region> could be us.actual.battle.net, EU.actual.battle.net and KR.actual.battle.net.
+  -username YourBnetEmail -password YourBnetPassword -address \<REGION><br>
+\* \<REGION> could be us.actual.battle.net, EU.actual.battle.net or KR.actual.battle.net for Americas, Europe or Asia respectively.
 4. Rename shortcut to your linking.
-5. Launch game from shortcut.
-6. Kill handle as per [Handle Killing Methods](#handle-killing-methods)
+5. Copy shortcut and edit username and password for second account. Repeat for additional accounts.
+6. Launch 1st instance of game from shortcut.
+7. Kill handle as per [Handle Killing Methods](#handle-killing-methods)
+8. Launch 2nd instance of game from shortcut.
+9. Kill Handle again
+10. Repeat steps 8 and 9 for subequent accounts.
 
 You can either copy a shortcut for each account and region or simply keep one shortcut per account and edit address details the shortcut when you want to switch regions.<br>
 Drawback with this method is that Blizzard forgot to make this work with MFA, which is kind of moot anyway as Blizzard prevent you from using standard MFA apps (which allow additional accounts).<br>
