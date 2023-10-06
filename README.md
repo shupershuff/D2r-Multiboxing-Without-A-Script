@@ -4,6 +4,7 @@
 <br>
 <br>
 # Overview
+Greetings Stranger.
 Are you worried about someones app or script to multibox Diablo 2? Do you have PTSD from being rick rolled in scripts?<br>
 This is a guide on all the method I know of for Diablo 2 Resurrected Multi boxing that don't require a script or custom application.<br>
 <br>
