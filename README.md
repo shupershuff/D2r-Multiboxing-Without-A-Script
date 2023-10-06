@@ -43,7 +43,8 @@ Not only will you be tripping over various battlenet windows (which is a nightma
 This requires 3rd party software (albeit Microsoft recommended) to kill the process handle that runs within d2r.exe when launched.<br>
 Killing this handle allows for multiple instances.
 ## ProcExp.exe
-Instructions TBC. Most youtube guides cover off how to use this.<br>
+Instructions TBC but long story short, launch game, open procexp, search for d2r.exe in the top right filter. Click on the handle tab and scroll down (it's a sizeable list) until you see an entry for 'DiabloII Check For Other Instances'. Right click on it and choose close. You are then clear to launch a subsequent game instance.<br>
+Note that Most youtube guides cover off how to use this.<br>
 **Download\:** https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer
 ## Handle64.exe
 Instructions TBC<br>
