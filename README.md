@@ -4,9 +4,10 @@
 <br>
 <br>
 # Overview
-Greetings Stranger.
+Greetings Stranger! I'm not surprised to see your kind here.<br>
+<br>
 Are you worried about someones app or script to multibox Diablo 2? Do you have PTSD from being rick rolled in scripts?<br>
-This is a guide on all the method I know of for Diablo 2 Resurrected Multi boxing that don't require a script or custom application.<br>
+This is a guide on all the methods I know of for Diablo 2 Resurrected Multi boxing that don't require a script or custom application.<br>
 <br>
 If you do want to use a script, I heard that [this one](https://github.com/shupershuff/Diablo2RLoader) is pretty damn good and the guy that made it is accepting mortgage payments as a way to say a small thanks. Payoff some internet strangers house today and feel great about it tomorrow! Everybody wins!<br>
 Anywho, outside of my script there are a couple other good scripts and apps I've seen out there. For the free ones I obviously recommend it's open source, don't be running some dodgy .exe where it can't be publically vetted on what it's doing.
@@ -38,28 +39,29 @@ Ew yucky. Ignore the plethora of YouTube guides telling you to do this. Gross.<b
 Not only will you be tripping over various battlenet windows (which is a nightmare when changing regions) but you'll also need to copy the game install folder several times.
 
 # Handle killing Methods
+This requires 3rd party software (albeit Microsoft recommended) to kill the process handle that runs within d2r.exe when launched.<br>
+Killing this handle allows for multiple instances.
 ## ProcExp.exe
 Instructions TBC. Most youtube guides cover off how to use this.<br>
-**Download**
-https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer
+**Download\:** https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer
 ## Handle64.exe
 Instructions TBC<br>
 Note: Requires a script (unless you like typing commands manually)<br>
-**Download**
-https://learn.microsoft.com/en-us/sysinternals/downloads/handle
+**Download\:** https://learn.microsoft.com/en-us/sysinternals/downloads/handle
 
 # Methods without requiring handle to be killed.
 All of these options are gross from a usability, Quality of Life and even financial (hardware) perspective but do functionally work without the need to use software to kill process handle.
 ## Virtual Machine
-TBC
+TBC but this guy has great instructions:<br>
+https://www.youtube.com/watch?v=XLLcc29EZ_8
 ## Windows Account Switching
-TBC
+TBC - Essentially just create multiple user accounts on your workstation, login to each, launch d2r from them and switch windows accounts to access the next D2r account.
 ## Multiple Physical PC's
-TBC
+TBC surely no instructins needed here anyway.
 
 # Notes
 ## Performance Tips
-TBC but long story short, set FPS cap, run in windowed mode, reduce gfx settings to low
+TBC but long story short, set Framerate (AKA FPS) cap to 60, run in windowed mode, reduce gfx settings to low.<br>
 
 There are mods which force legacy graphics which some folk enjoy but I can't endorse these, use at your own risk.
 ## FAQ
