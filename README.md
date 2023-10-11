@@ -39,6 +39,9 @@ If you have issues logging in, try logging in manually into battlenet as sometim
 Ew yucky. Ignore the plethora of YouTube guides telling you to do this. Gross.<br>
 Not only will you be tripping over various battlenet windows (which is a nightmare when changing regions) but you'll also need to copy the game install folder several times.
 
+## Authentication Alternatives
+TBC reference temporary WEB_TOKEN and more permanent WEB_TOKEN methods of authenticating.
+
 # Handle killing Methods
 This requires 3rd party software (albeit Microsoft recommended) to kill the process handle that runs within d2r.exe when launched.<br>
 Killing this handle allows for multiple instances.
