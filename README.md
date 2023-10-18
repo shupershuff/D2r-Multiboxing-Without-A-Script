@@ -10,7 +10,8 @@ Are you worried about someones app or script to multibox Diablo 2? Do you have P
 This is a guide on all the methods I know of for Diablo 2 Resurrected Multi boxing that don't require a script or custom application.<br>
 <br>
 
-There are a couple good scripts and apps I've seen out there (Sunblood's D2rML and ISBoxer springs to mind and oh, [this one](https://github.com/shupershuff/Diablo2RLoader) that I made). For the free ones I obviously recommend it's open source, don't be running some dodgy .exe where it can't be publically vetted on what it's doing.
+There are a couple good scripts and apps I've seen out there (Sunblood's D2rML and ISBoxer springs to mind and oh, [this silly one](https://github.com/shupershuff/Diablo2RLoader) that I made).<br>
+For the free ones I obviously recommend it's open source, don't be running some dodgy .exe where it can't be publically vetted on what it's doing.
 For the paid ones, that's at your own risk but there are some seemingly reputable ones out there.<br>
 I would recommend staying clear of any game altering mods, or anything that adds any element of automation within the game etc (at the end of the day, the game is for playing right?).
 
@@ -54,6 +55,9 @@ To obtain your token, Decrypt, convert to binary and set the registry key, perfo
 5. DO NOT SHARE SCREENSHOTS OF THIS PAGE OR THE LINK TO THIS PAGE ANYWHERE ONLINE.
 6. Use the following PowerShell commands, exchanging Token for your token and Region to the appropriate region:
     ```
+    # Launch as admin
+     if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit } #commands require elevated rights. Launch as admin.
+    
     # Change these settings to suit you
      $Region = "NA" # Choose between NA, EU and KR.
      $Token = "US-d12ab21123abcdefabcdefabcdef1231-123123123" # Obtain this token from the site above. KEEP THIS SECRET.
@@ -72,30 +76,61 @@ To obtain your token, Decrypt, convert to binary and set the registry key, perfo
      Set-ItemProperty -Path $Path -Name "REGION" -Value $Region
      Set-ItemProperty -Path $Path -Name "WEB_TOKEN" -Value $ProtectedData -Type Binary
     # Start the game
-     Start-Process "$Gamepath\D2R.exe" -ArgumentList -uid OSI```
+     Start-Process "$Gamepath\D2R.exe" -ArgumentList -uid OSI
+    ```
 Note: Due to how the game updates registry values, the drawback to using this method is that you can't open all accounts up at once, or close a game instance while another is loading. You must wait to get to the character selection screen.
+
+Credit to dschu012 for [discovering this](https://github.com/Farmith/D2RMIM/pull/11/files#diff-5408bbaf05738fe52729de093b38981abecffeb304b1cd388713cbe6a0461d21) and thanks to Sunblood for pointing me towards this discovery.
 
 # Handle killing Methods
 This requires 3rd party software (albeit Microsoft recommended) to kill the process handle that runs within d2r.exe when launched.<br>
 Killing this handle allows for multiple instances.
-## ProcExp.exe
-Instructions TBC but long story short, launch game, open procexp, search for d2r.exe in the top right filter. Click on the handle tab and scroll down (it's a sizeable list) until you see an entry for 'DiabloII Check For Other Instances'. Right click on it and choose close. You are then clear to launch a subsequent game instance.<br>
+## Process Explorer (ProcExp.exe)
+Instructions TBC but long story short, launch game, open procexp as administrator, search for d2r.exe in the top right filter. Click on the handle tab and scroll down (it's a sizeable list) until you see an entry for 'DiabloII Check For Other Instances'. Right click on it and choose close. You are then clear to launch a subsequent game instance.<br>
 Note that Most youtube guides cover off how to use this.<br>
 **Download\:** https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer
 ## Handle64.exe
-Instructions TBC<br>
-Note: Requires a script (unless you like typing commands manually)<br>
+This is a handy command line based tool that can also kill process handles like Process Explorer.
+Note: Requires a script (unless you like typing commands manually):<br>
 **Download\:** https://learn.microsoft.com/en-us/sysinternals/downloads/handle
 
+```
+  # Launch as admin
+  if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit } #commands require elevated rights. Launch as admin.
+
+  # Inspect running processes for d2r.exe and examine all handles and write to a d2r_handles.txt
+  & "$PSScriptRoot\handle\handle64.exe" -accepteula -a -p D2R.exe > $PSScriptRoot\d2r_handles.txt
+	$proc_id_populated = ""
+	$handle_id_populated = ""
+	foreach($Line in Get-Content $PSScriptRoot\d2r_handles.txt) {
+		$proc_id = $Line | Select-String -Pattern '^D2R.exe pid\: (?<g1>.+) ' | %{$_.Matches.Groups[1].value}
+		if ($proc_id){
+			$proc_id_populated = $proc_id
+		}
+		$script:handle_id = $Line | Select-String -Pattern '^(?<g2>.+): Event.*DiabloII Check For Other Instances' | %{$_.Matches.Groups[1].value}
+		if ($handle_id){
+			$handle_id_populated = $handle_id
+		}
+		if ($handle_id){
+			Write-Host "Closing" $proc_id_populated $handle_id_populated
+			& "$PSScriptRoot\handle\handle64.exe" -p $proc_id_populated -c $handle_id_populated -y
+		}
+	}
+```
+
+This essentially checks a d2r.exe for the handle and closes it if it exists.
+I'm lazy and didn't write this, I just copied from [here](https://forums.d2jsp.org/topic.php?t=90563264&f=87&p=595448522)
+
 # Methods without requiring handle to be killed.
-All of these options are gross from a usability, Quality of Life and even financial (hardware) perspective but do functionally work without the need to use software to kill process handle.
+All of these options are gross from a usability, quality of life and even financial (hardware) perspective but do functionally work without the need to use software to kill process handle.
 ## Virtual Machine
-TBC but this guy has great instructions:<br>
+TBC but this guy has great instructions for Hyper V VM setup and steps for GPU partitioning:<br>
 https://www.youtube.com/watch?v=XLLcc29EZ_8
 ## Windows Account Switching
 TBC - Essentially just create multiple user accounts on your workstation, login to each, launch d2r from them and switch windows accounts to access the next D2r account.
 ## Multiple Physical PC's
-TBC surely no instructins needed here anyway.
+Simple. Have multiple Physical computers used to launch the game with different accounts.
+That's it.
 
 # Notes
 ## Performance Tips
