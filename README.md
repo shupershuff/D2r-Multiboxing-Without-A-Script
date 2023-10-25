@@ -18,7 +18,7 @@ I would recommend staying clear of any game altering mods, or anything that adds
 # Game Launching Methods
 ## Launch via Parameters (with a desktop Shortcut)
 This method will launch the game directly from your desktop, without the need to open the battlenet client.
-1. Browse to your Diablo 2 Resurrected game install folder.
+1. Browse to your Diablo 2 Resurrected game install folder (you only need one install folder).
 2. Right click on d2r.exe and create shortcut. Copy shortcut to desktop.
 3. Edit the shortcut and append the target field with:<br>
   -username YourBnetEmail -password YourBnetPassword -address \<REGION><br>
@@ -38,7 +38,7 @@ If you have issues logging in, try logging in manually into battlenet as sometim
 NOTE: KR.Actual.Battle.net has been down since 7th Oct 2023. Blizzard are useless and haven't resolved this service outage.
 
 ## Launch via Battlenet Client
-Ew yucky. Ignore the plethora of YouTube guides telling you to do this. Gross.<br>
+Ew yucky. Ignore the plethora of YouTube guides telling you to open multiple battlenet instances to do this. Gross.<br>
 Not only will you be tripping over various battlenet windows (which is a nightmare when changing regions) but you'll also need to copy the game install folder several times.
 
 ## Launch via Authentication Token (Advanced)
@@ -78,7 +78,7 @@ To obtain your token, Decrypt, convert to binary and set the registry key, perfo
     # Start the game
      Start-Process "$Gamepath\D2R.exe" -ArgumentList -uid OSI
     ```
-Note: Due to how the game updates registry values, the drawback to using this method is that you can't open all accounts up at once, or close a game instance while another is loading. You must wait to get to the character selection screen.
+Note: Due to how the game updates registry values, the drawback to using this method is that you can't open all accounts up at once, or close a game instance while another is loading. You must wait to get to the character selection screen before launching a subsequent account.
 
 Credit to dschu012 for [discovering this](https://github.com/Farmith/D2RMIM/pull/11/files#diff-5408bbaf05738fe52729de093b38981abecffeb304b1cd388713cbe6a0461d21) and thanks to Sunblood for pointing me towards this discovery.
 
