@@ -1,8 +1,3 @@
-<br>
-
-**THIS PAGE IS A WORKING DRAFT AND ISN'T FINISHED**    
-<br>
-<br>
 # Overview
 Greetings Stranger! I'm not surprised to see your kind here.<br>
 <br>
@@ -86,8 +81,8 @@ Credit to dschu012 for [discovering this](https://github.com/Farmith/D2RMIM/pull
 This requires 3rd party software (albeit Microsoft recommended) to kill the process handle that runs within d2r.exe when launched.<br>
 Killing this handle allows for multiple instances.
 ## Process Explorer (ProcExp.exe)
-Instructions TBC but long story short, launch game, open procexp as administrator, search for d2r.exe in the top right filter. Click on the handle tab and scroll down (it's a sizeable list) until you see an entry for 'DiabloII Check For Other Instances'. Right click on it and choose close. You are then clear to launch a subsequent game instance.<br>
-Note that Most youtube guides cover off how to use this.<br>
+Long story short, launch game, open procexp as administrator, search for d2r.exe in the top right filter. Click on the handle tab and scroll down (it's a sizeable list) until you see an entry for 'DiabloII Check For Other Instances'. Right click on it and choose close. You are then clear to launch a subsequent game instance.<br>
+Note that most youtube guides cover off how to use this old method, so I won't rehash instructions here.<br>
 **Download\:** https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer
 ## Handle64.exe
 This is a handy command line based tool that can also kill process handles like Process Explorer.
@@ -124,21 +119,37 @@ I'm lazy and didn't write this, I just copied from [here](https://forums.d2jsp.o
 # Methods without requiring handle to be killed.
 All of these options are gross from a usability, quality of life and even financial (hardware) perspective but do functionally work without the need to use software to kill process handle.
 ## Virtual Machine
-TBC but this guy has great instructions for Hyper V VM setup and steps for GPU partitioning:<br>
+You can run D2r from a VM, however there are several technical steps required. Not all free VM technologies support this.
+If you want to explore this avenue, this guy has great instructions for Hyper V VM setup and steps for GPU partitioning:<br>
 https://www.youtube.com/watch?v=XLLcc29EZ_8
 ## Windows Account Switching
-TBC - Essentially just create multiple user accounts on your workstation, login to each, launch d2r from them and switch windows accounts to access the next D2r account.
+Essentially this is just creating multiple user accounts on your workstation, login to each, launch d2r from them and switch windows accounts to access the next D2r account.
 ## Multiple Physical PC's
 Simple. Have multiple Physical computers used to launch the game with different accounts.
 That's it.
 
 # Notes
 ## Performance Tips
-TBC but long story short, set Framerate (AKA FPS) cap to 60, run in windowed mode, reduce gfx settings to low.<br>
+If you don't want your Diablo games to run like a slideshow, here are some tips. You'll of course need to adjust based on your hardware and setup.
+1. IMPORTANT. Set an Frame Rate (FPS) cap in the graphics options. Recommend 60 but adjust depending on your GPU power and instances you're running. This will prevent each instance from trying to fully utilise your GPU compute.
+2. Reduce graphics settings in game to performance over quality.
+3. Run games in Windowed mode. Especially if you have more than one monitor. Not only will it save you performance, it's waaaay easier than alt tabbing.
+4. In addition to changing your settings to launch the game in windowed mode, you should also make your secondary account windows smaller (ie lower resolution) to save on GPU utilisation. You can adjust resolution from the in game menu or simply by shrinking the window. If need you can of course do the opposite and maximise one of the smaller windows if you are playing another character for a bit.
+5. If you are wanting different graphics settings for different accounts (eg different FPS cap, different audio settings, different resolution, nicer graphics settings etc etc), then I would highly recommend making use of the QOL features of this script. The automatic settings switcher can be used so that each account loads with it's own settings at launch. There is also the manual setting switcher feature if you want to define what settings file to load for a given account. See the relevant sections above for more info.
+6. Obviously if you run other graphic demanding things like wallpaper engine in the background, this will hurt your overall FPS. Some wallpapers will have neglible impact but some are  noticably impactful on performance.
+7. Make use of hardware monitoring software to see how much you are utilising RAM, CPU, GPU - Processor and GPU - VRAM. If you are under or overutilised you can adjust your settings accordingly for the best experience.
 
-There are mods which force legacy graphics which some folk enjoy but I can't endorse these, use at your own risk.
-## FAQ
-TBC
+**My setup**<br>
+Note that on my specs (5950x, RTX2080s (which has 8GB VRAM), 32GB RAM), I run my instances on the lowest graphics options possible. <br>
+DLSS is set to ultra performance. Framerate (FPS) caps for secondary accounts are around 50fps. For my primary account I set the FPS cap to 60fps.<br>
+<br>
+With 3 instances (2 windows at approx 1280x780 resolution, 1 window (primary account) at 2556x1373 resolution, The CPU is barely used, Memory is about 85% utilised, VRAM is 80% utilised and GPU is about 85-90% (6800MB).<br>
+With 4 instances (an additional window at approx 1280x780), CPU is still fine (15%), Memory is maxed out, VRAM is 92%+ (7600MB+) and GPU is 95-100%. Different parts of the game can run pretty poorly and as such sometimes I reduce the secondary accounts FPS Cap to around 44 instead.<br>
+<br>
+I've noted that with my hardware running 4 instances is generally not fun graphically due to performance stutters, FPS drops and increased chance of crashing. I'd argue that running 4 or more accounts is confusing and isn't fun logistically either but I digress.
+
+Lastly a quick note that there are mods which force legacy graphics which some folk enjoy the benefits from. However I can't endorse mods as using any mod is at your own risk.<br>
+
 ## Other notes
 All game instances share the same settings file (Settings.json) which can be found in C:\Users\USERNAME\Saved Games\Diablo 2 Resurrected.<br>
 This means if you edit the graphics/audio settings from the in game menu, it will apply these settings to the next time you launch the game, regardless of the account.<br>
