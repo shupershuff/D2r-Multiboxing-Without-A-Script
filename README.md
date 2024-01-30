@@ -37,12 +37,14 @@ Ew yucky. Ignore the plethora of YouTube guides telling you to open multiple bat
 Not only will you be tripping over various battlenet windows (which is a nightmare when changing regions) but you'll also need to copy the game install folder several times.
 
 ## Launch via Authentication Token (Advanced)
-This is technically the same way that Battle.net uses to launch and does work with MFA enabled accounts.
+This is technically the same way that Battle.net uses to launch and does work with MFA (Multi-Factor Authentication) enabled accounts.
+This token is basically saying this is my account, I'm the owner and I've authenticated. As such no username, password or MFA is needed.
 In the registry key "HKCU:\SOFTWARE\Blizzard Entertainment\Battle.net\Launch Options\OSI" is a binary value called "WEB_TOKEN".
-This registry value gets updated when you launch the game (from battlenet), reach character selection screen or close the game.
+This registry value gets updated when you launch the game (from battle.net), reach character selection screen or close the game.
 Essentially, to launch via this method, the WEB_TOKEN must be set prior with the appropriate account Authentication Token prior to launching d2r.exe
+Note that the Token provided by the battle.net client is only a temporary token and will expire. We can however set a token that will not expire unless you disable/enable MFA on your account.
 
-To obtain your token, Decrypt, convert to binary and set the registry key, perform the following steps:
+To obtain your token, decrypt, convert to binary and set the registry key, perform the following steps:
 1. Open your preferred Browser in private mode
 2. Browse to https://us.battle.net/login/en/?externalChallenge=login&app=OSI
 3. Login with your battlenet details. This will show an error page (this is expected). The error page link contains an identifier for your account in the form of US-d12ab21123abcdefabcdefabcdef1231-123123123.
@@ -55,7 +57,7 @@ To obtain your token, Decrypt, convert to binary and set the registry key, perfo
     
     # Change these settings to suit you
      $Region = "NA" # Choose between NA, EU and KR.
-     $Token = "US-d12ab21123abcdefabcdefabcdef1231-123123123" # Obtain this token from the site above. KEEP THIS SECRET.
+     $Token = "US-d12ab21123abcdefabcdefabcdef1231-123123123" # Obtain this token from the site above. KEEP THIS SECRET. Sharing this is like giving away the location and keys to your car.
      $GamePath = "C:\Program Files (x86)\Diablo II Resurrected" # Where your game is installed.
     
     # Define Entropy
