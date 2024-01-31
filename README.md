@@ -30,8 +30,6 @@ You can either copy a shortcut for each account and region or simply keep one sh
 Drawback with this method is that Blizzard forgot to make this work with MFA, which is kind of moot anyway as Blizzard prevent you from using standard MFA apps (which allow additional accounts).<br>
 If you have issues logging in, try logging in manually into battlenet as sometimes there are captcha codes (especially if you typo your email or password).<br>
 
-NOTE: KR.Actual.Battle.net has been down since 7th Oct 2023. Blizzard are useless and haven't resolved this service outage.
-
 ## Launch via Battlenet Client
 Ew yucky. Ignore the plethora of YouTube guides telling you to open multiple battlenet instances to do this. Gross.<br>
 Not only will you be tripping over various battlenet windows (which is a nightmare when changing regions) but you'll also need to copy the game install folder several times.
