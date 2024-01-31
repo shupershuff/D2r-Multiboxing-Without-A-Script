@@ -23,8 +23,8 @@ This method will launch the game directly from your desktop, without the need to
 6. Launch 1st instance of game from shortcut.
 7. Kill handle as per [Handle Killing Methods](#handle-killing-methods)
 8. Launch 2nd instance of game from shortcut.
-9. Kill Handle again
-10. Repeat steps 8 and 9 for subequent accounts.
+9. Kill Handle again.
+10. Repeat steps 8 and 9 for subsequent accounts.
 
 You can either copy a shortcut for each account and region or simply keep one shortcut per account and edit address details the shortcut when you want to switch regions.<br>
 Drawback with this method is that Blizzard forgot to make this work with MFA, which is kind of moot anyway as Blizzard prevent you from using standard MFA apps (which allow additional accounts).<br>
@@ -127,6 +127,8 @@ Essentially this is just creating multiple user accounts on your workstation, lo
 ## Multiple Physical PC's
 Simple. Have multiple Physical computers used to launch the game with different accounts.
 That's it.
+## Running in Containers
+Running containerised instances is a clever but overly technical solution to the problem which is not suitable for everyday users.
 
 # Notes
 ## Performance Tips
