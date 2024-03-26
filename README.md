@@ -5,7 +5,7 @@ Are you worried about someones app or script to multibox Diablo 2? Do you have P
 This is a guide on all the methods I know of for Diablo 2 Resurrected Multi boxing that don't require a script or custom application.<br>
 <br>
 
-There are a couple good scripts and apps I've seen out there (Sunblood's D2rML and ISBoxer springs to mind and oh, [this silly one](https://github.com/shupershuff/Diablo2RLoader) that I made).<br>
+There are a couple good scripts and apps I've seen out there (Sunblood's D2rML, ISBoxer and Sandboxie springs to mind and oh, [this silly one](https://github.com/shupershuff/Diablo2RLoader) that I made).<br>
 For the free ones I obviously recommend it's open source, don't be running some dodgy .exe where it can't be publically vetted on what it's doing.
 For the paid ones, that's at your own risk but there are some seemingly reputable ones out there.<br>
 I would recommend staying clear of any game altering mods, or anything that adds any element of automation within the game etc (at the end of the day, the game is for playing right?).
